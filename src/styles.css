@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+body {
+    font-family: 'Droid Sans', sans-serif;
+    display: flex;
+    flex-direction: column;  
+    font-size: 18px;  
+}
+
+app-root {
+    align-self: center;
+    max-width: 900px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+
+.whiteframe, app-to-child, app-from-child, app-from-child-two {
+    display: block;
+    border : 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); 
+    padding : 16px;
+    margin:26px 0;
+    background: white;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;    
+    margin:8px;
+    padding: 0 4px;
+    border-radius: 4px; 
+    line-height: 24px;
+    font-size: 14px;   
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #7e7e7e;
+}
+
+button {
+    min-width: 100px;
+    line-height: 18px;
+    border : 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #eaeaea;    
+    margin-left: 8px;
+    margin-top:16px;
+
+}
+
+button[disabled]{
+    background : white;
+}
+
+button:focus{
+    outline: none;    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.error{
+    font-size: x-small;
+    color:red;
+    margin-left: 8px;
+}
+
+.one, .two, .three, .four, .five, .six{    
+    border-radius: 4px;
+    padding:16px;
+    margin-bottom: 28px;
+}
+
+.one{
+    background: #5C6BC0;
+    border: 1px solid #303F9F;
+}
+
+.two{
+    background: #66BB6A;
+    border: 1px solid #43A047;
+}
+
+.three{
+    background : #FFC107;
+    border:1px solid #FFA000;
+}
+
+.four{
+    background: #AB47BC;
+    border : 1px solid #7B1FA2;
+}
+
+.five{
+    background: #EF5350;
+    border : 1px solid #D32F2F;
+}
+
+.six{
+    background: #D4E157;
+    border : 1px solid #AFB42B;
+}

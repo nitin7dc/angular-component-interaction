@@ -1,0 +1,52 @@
+<h1>Angular Component Interaction</h1>
+
+<div class="one">
+  <h3>Passing data from parent to child component</h3>
+
+  <small>simply passing value to attributes</small>  
+  <app-to-child message="hello"></app-to-child>
+
+  <small>bind to variable declared in parent component class</small>
+  <app-to-child [message]="message"></app-to-child>
+</div>
+
+
+<div class="two">
+  <h3>Pass data + updates from parent to child.</h3>
+
+  <div>
+    <input #friend type="text" placeholder="name of friend" />
+    <button type="button" (click)="add(friend)">add friend</button>
+  </div>
+
+  <app-to-child message="List of friends" [friends]="friends"></app-to-child>
+</div>
+
+
+<div class="three">
+  <h3>Pass data from child to parent.</h3>
+  <p>Message from child : {{messageFromChild}}</p>
+  <app-from-child (sendHello)="receiveHello($event)"></app-from-child>  
+</div>
+
+
+<div class="four">
+  <h3>Access child from parent using local-variable.</h3>
+  <p>Child component is counting : {{child.counter}}</p>  
+  <app-from-child-two #child></app-from-child-two>
+</div>
+
+
+<div class="five">
+  <h3>Access child from parent using  @ViewChild.</h3>
+  <p>Child component is counting : {{childTwo.counter}}</p>
+  <button type="button" (click)="start()">start</button>
+  <button type="button" (click)="stop()">stop</button>
+  <app-from-child-two #two></app-from-child-two>
+</div>
+
+
+<div class="six">
+  <h3>Pass event from child to parent via service.</h3>
+  <p>This will be covered in part 7 tutorial under services</p>
+</div>
